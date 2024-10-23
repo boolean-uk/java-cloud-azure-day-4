@@ -86,3 +86,19 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 - Deploy a React or Angular frontend to the same VM configured so that it can talk to backend
 - Screenshot the various parts of your stack in action and post the results here
 
+## Solution for Core
+
+### 1. Generated the key and updated variable.tf
+![Screenshot 2024-10-23 183316](https://github.com/user-attachments/assets/02dc71d5-2107-4830-8e1a-b45a8565c4d3)
+
+### 2. Created the VM
+![Screenshot 2024-10-23 174949](https://github.com/user-attachments/assets/e188ab4a-03b0-4b71-8846-766ba4539bd8)
+
+![Screenshot 2024-10-23 181328](https://github.com/user-attachments/assets/b2d2f172-a4a6-43ef-8a6e-8e69fde222d6)
+
+### 3. Updated the network settings to allow port 5000 inbound
+![Screenshot 2024-10-23 181921](https://github.com/user-attachments/assets/f7ce21ac-02b5-48f9-9493-8b816fca3733)
+
+### 4. Test of the API in the VM
+![Screenshot 2024-10-23 181854](https://github.com/user-attachments/assets/00ad3d40-535a-45d4-b484-f89b1f703bb3)
+
