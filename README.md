@@ -81,8 +81,18 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 - Deploy your backend to the VM and run it so that the endpoints are available.
 - Screenshot your success and post the screenshots below here to showcase your success
 
+### Terraform
+![alt text](azure-day-5-terraform.png)
+
+### Backend deployed
+![alt text](azure-day-5-backend.png)
+
 ## Extension
 
 - Deploy a React or Angular frontend to the same VM configured so that it can talk to backend
 - Screenshot the various parts of your stack in action and post the results here
 
+### Frontend deployed
+![alt text](azure-day-5-frontend.png)
+
+![alt text](azure-day-5-frontend2.png)
