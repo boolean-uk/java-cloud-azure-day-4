@@ -4,9 +4,9 @@
 2. Changed 'my' to 'emmaLovgren' in `main.tf`.
 3. Changed Ubuntu version and added security rules to `main.tf`.
 4. Run `terraform init -upgrade`
-5. Validate terraform
+5. Validate terraform:  
 ![](images/01_ValidateTerraform.png)
-6. Generate main.tfplan and run apply command to create VM:
+6. Generate main.tfplan and run apply command to create VM:  
 ![](images/02_VM_created.png)
 7. Run ./gradlew build in the IntelliJ project for the backend to update the jar file.
 8. Install java on VM with `sudo apt install openjdk-21-jdk`
