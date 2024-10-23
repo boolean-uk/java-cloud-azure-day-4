@@ -1,5 +1,17 @@
 # Java Cloud Azure Day 4 - TerraForm
 
+### Submission
+
+I've uploaded my backend to my VM - leoWahlandtVm using Terraform
+
+the IP-address to my server with the endpoint artists is:
+http://20.68.223.129:5000/artists
+
+![endPointFromVm.png](endpointFromVm.png)
+
+![runningVm.png](runningVm.png)
+
+
 ## Learning Objectives
 
 - To be able to create a Linux Virtual Machine on Azure using TerraForm
