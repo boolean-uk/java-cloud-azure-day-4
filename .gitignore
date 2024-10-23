@@ -6,3 +6,5 @@
 /main.tfplan
 /terraform.tfstate
 /terraform.tfstate.backup
+*.jar
+notes-front-end/
