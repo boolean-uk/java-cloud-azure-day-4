@@ -12,6 +12,9 @@ http://20.68.223.129:5000/artists
 ![runningVm.png](runningVm.png)
 
 
+Also added a frontend:
+http://20.68.223.129
+
 ## Learning Objectives
 
 - To be able to create a Linux Virtual Machine on Azure using TerraForm
