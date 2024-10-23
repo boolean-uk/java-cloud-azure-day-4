@@ -1,5 +1,19 @@
 # Java Cloud Azure Day 4 - TerraForm
 
+## Pictures
+
+
+![API Call](api_call.png)
+
+![Database Connection](db_conn.png)
+
+![Running NGINX](running_nginx.png)
+
+![VM Files](vm_files.png)
+
+![Working Frontend with NGINX](working_frontend_with_nginx.png)
+
+
 ## Learning Objectives
 
 - To be able to create a Linux Virtual Machine on Azure using TerraForm

@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "rg" {
 
 # Create virtual network
 resource "azurerm_virtual_network" "my_terraform_network" {
-  name                = "myVnet"
+  name                = "dagMyVNet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
@@ -17,7 +17,7 @@ resource "azurerm_virtual_network" "my_terraform_network" {
 
 # Create subnet
 resource "azurerm_subnet" "my_terraform_subnet" {
-  name                 = "mySubnet"
+  name                 = "dagSubnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.my_terraform_network.name
   address_prefixes     = ["10.0.1.0/24"]
@@ -25,15 +25,14 @@ resource "azurerm_subnet" "my_terraform_subnet" {
 
 # Create public IPs
 resource "azurerm_public_ip" "my_terraform_public_ip" {
-  name                = "myPublicIP"
+  name                = "DagPublicIP"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Dynamic"
 }
 
-# Create Network Security Group and rule
 resource "azurerm_network_security_group" "my_terraform_nsg" {
-  name                = "myNetworkSecurityGroup"
+  name                = "DagNetworkSecurityGroup"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -48,16 +47,17 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+
 }
 
 # Create network interface
 resource "azurerm_network_interface" "my_terraform_nic" {
-  name                = "myNIC"
+  name                = "DagNIC"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
   ip_configuration {
-    name                          = "my_nic_configuration"
+    name                          = "Dag_nic_configuration"
     subnet_id                     = azurerm_subnet.my_terraform_subnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.my_terraform_public_ip.id
@@ -89,13 +89,20 @@ resource "azurerm_storage_account" "my_storage_account" {
   account_replication_type = "LRS"
 }
 
+# # set variable for vm
+#   variable "username" {
+#     type = string
+#     description = "The username of the vm"
+#     default = "azureadmin"
+#   }
+
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
-  name                  = "myVM"
+  name                  = "DagTerraformVM"
   location              = azurerm_resource_group.rg.location
   resource_group_name   = azurerm_resource_group.rg.name
   network_interface_ids = [azurerm_network_interface.my_terraform_nic.id]
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_B1s"
 
   os_disk {
     name                 = "myOsDisk"
@@ -110,15 +117,18 @@ resource "azurerm_linux_virtual_machine" "my_terraform_vm" {
     version   = "latest"
   }
 
+
+
   computer_name  = "hostname"
   admin_username = var.username
 
   admin_ssh_key {
     username   = var.username
-    public_key = file("azure-tf-server.pub")
+    public_key = file("azure_tf_server.pub")
   }
 
   boot_diagnostics {
     storage_account_uri = azurerm_storage_account.my_storage_account.primary_blob_endpoint
   }
+
 }
