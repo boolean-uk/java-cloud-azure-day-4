@@ -115,7 +115,7 @@ resource "azurerm_linux_virtual_machine" "hermans_terraform_vm" {
 
   admin_ssh_key {
     username   = var.username
-    public_key = file("azure-tf-server.pub")
+    public_key = file("azurekey.pub")
   }
 
   boot_diagnostics {
