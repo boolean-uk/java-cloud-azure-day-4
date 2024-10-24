@@ -1,0 +1,23 @@
+server:
+  port: 5000
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-nameless-grass-a2mwfjol.eu-central-1.aws.neon.tech:5432/experisbool
+    username: experisbool_owner
+    password: PWkQVagO9BE7
+    max-active: 3
+    max-idle: 3
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
