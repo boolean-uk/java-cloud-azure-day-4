@@ -83,8 +83,13 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 - Deploy your backend to the VM and run it so that the endpoints are available.
 - Screenshot your success and post the screenshots below here to showcase your success
 
+![Backend working](backend_working.png)
+
+![Azure VM](azure_vm.png)
+
 ## Extension
 
 - Deploy a React or Angular frontend to the same VM configured so that it can talk to backend
 - Screenshot the various parts of your stack in action and post the results here
 
+![Frontend working](frontend_working.png)
