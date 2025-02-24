@@ -85,11 +85,8 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 
 ![Backend working](backend_working.png)
 
-<<<<<<< HEAD
 ![Azure VM](azure_vm.png)
 
-=======
->>>>>>> 2dd9b372fdc9b32cef02499cf60947b30ec7067c
 ## Extension
 
 - Deploy a React or Angular frontend to the same VM configured so that it can talk to backend
