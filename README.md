@@ -88,3 +88,14 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 - Deploy a React or Angular frontend to the same VM configured so that it can talk to backend
 - Screenshot the various parts of your stack in action and post the results here
 
+# Core
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
+
+# Extension
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
