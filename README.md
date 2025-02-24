@@ -1,3 +1,18 @@
+# Screenshots
+
+### Azure Portal VM
+
+![azure_portal_vm.png](azure_portal_vm.png)
+
+### VM server API
+
+![vmserver_api.png](vmserver_api.png)
+
+### VM server client
+
+![vmserver_client.png](vmserver_client.png)
+
+
 # Java Cloud Azure Day 4 - TerraForm
 
 ## Learning Objectives
