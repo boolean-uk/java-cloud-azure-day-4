@@ -82,6 +82,8 @@ ssh -i azure-tf-server azureadmin@<THE IP ADDRESS OF THE VM>
 - Create the VM and its associated infrastructure by modifying the files here.
 - Deploy your backend to the VM and run it so that the endpoints are available.
 - Screenshot your success and post the screenshots below here to showcase your success
+![](Screenshot_2025-02-25_090308.png)
+The ```pixels``` array is a byte array that contains the pixels that the image is compirsed of. In the browser, it converts each bye to an ASCII character I think, which is why it looks like that. The String is MUCH longer than shown in the screenshot.
 
 ## Extension
 
